@@ -3,7 +3,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const date = require(__dirname + '/date.js'); //It carry data from data.js
-
+const port = process.env.PORT || 3000
 const app = express();
 
 const listItems = ["buy food","cook","Eat"];
@@ -46,6 +46,6 @@ app.get("/about",function(req,res){
     res.render("about");
 })
 
-app.listen(3000, function() {
-  console.log("Server running on port 3000.");
+app.server.listen(port,() => {
+  console.log(`Server running at port `+port);
 });
