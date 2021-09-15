@@ -46,6 +46,6 @@ app.get("/about",function(req,res){
     res.render("about");
 })
 
-app.server.listen(port,() => {
+app.listen(port,() => {
   console.log(`Server running at port `+port);
 });
